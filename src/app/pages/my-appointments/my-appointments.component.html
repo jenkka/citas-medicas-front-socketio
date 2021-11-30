@@ -1,0 +1,6 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let appointment of appointments">
+      <a routerLink="/chat/{{appointment._id}}">[{{appointment.start_date}}] Appointment with {{appointment.doctor_username}}</a>
+    </li>
+  </ul>
+  

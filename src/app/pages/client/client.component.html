@@ -1,0 +1,16 @@
+<h1 *ngIf="client == undefined">Client not found</h1>
+<div *ngIf="client != undefined" class="d-flex justify-content-center mt-5 mb-5">
+  <div class="card mb-3 col-6">
+    <div class="card-body">
+      <h5 class="card-header card-title">{{client.name}} {{client.lastname}}</h5>
+      <br>
+      <div class="client-information ml-4">
+        <p class="card-text">Username: {{client.username}}</p>
+        <p class="card-text">Gender: {{client.gender}}</p>
+        <p class="card-text">Age: {{client.age}}</p>
+        <p class="card-text">Email: {{client.email}}</p>
+        <p class="card-text">Password: ******</p>
+      </div>
+    </div>
+  </div>
+</div>

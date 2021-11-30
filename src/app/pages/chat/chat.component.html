@@ -1,0 +1,8 @@
+<form (submit)="doOnSubmit()">
+    <input id="textField" [formControl]="textField" name="message" type="text" [(ngModel)]="msg">
+    <button>Send</button>
+</form>
+
+<div>
+    <p *ngFor="let message of messages" [innerHTML]="message">{{message}}</p>
+</div>

@@ -1,0 +1,29 @@
+<h1 *ngIf="doctor == undefined">doctor not found</h1>
+<div *ngIf="doctor != undefined" class="d-flex justify-content-center mt-5 mb-5">
+
+  <div class="section">    
+      <div class="columns">
+        <div class="column is-4 is-offset-4">
+          <div class="card">
+            <div class="header">
+              <div class="avatar ">
+                <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="user-meta has-text-centered">
+                <h3 class="username">{{doctor.name}} {{doctor.lastname}}</h3>
+                <h5 class="Specialty ">{{doctor.specialty}}</h5>
+              </div>
+              <div class="user-bio has-text-centered">
+                <p>Email: {{doctor.email}}</p>
+              </div>
+              <div class="action has-text-centered">
+                <a href="#" class="button is-small"><i class="fas fa-heartbeat"></i>Appointment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

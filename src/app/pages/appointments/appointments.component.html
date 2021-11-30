@@ -1,0 +1,5 @@
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let appointment of appointments">
+    <a routerLink="/appointments/{{appointment._id}}">[{{appointment.start_date}}] Appointment with {{appointment.client_username}}</a>
+  </li>
+</ul>

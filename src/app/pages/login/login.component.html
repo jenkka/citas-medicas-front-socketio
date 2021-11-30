@@ -1,0 +1,29 @@
+<aside id="form" class="col-sm-4">
+
+  <div class="card">
+  <article class="card-body">
+  <a href="" class="float-right btn btn-outline-primary" (click)="goToPage('signup')" href="javascript:void(0)">Sign up</a>
+  <h4 class="card-title mb-4 mt-1">Sign in</h4>
+  <p>
+    <a href="" class="btn btn-block btn-outline-info" (click)="googleLogin()" href="javascript:void(0)"> <i class="fab fa-google"></i>  Login with Google</a>
+  </p>
+  <hr>
+  <form>
+    <div class="form-group">
+        <input [(ngModel)]="email" name="password" class="form-control" placeholder="Email" type="email">
+    </div>
+    <div class="form-group">
+        <input [(ngModel)]="password" name="password" class="form-control" placeholder="Password" type="password">
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block" (click)="login()" href="javascript:void(0)">Login</button>
+            </div>
+        </div>
+    </div>
+  </form>
+  </article>
+  </div>
+
+</aside>
