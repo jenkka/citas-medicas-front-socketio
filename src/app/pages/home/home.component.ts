@@ -11,5 +11,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-}
+ 
+  randomNumber(){
+    const randomNum = Math.floor((Math.random() * 100) + 1);
+    const imgUrl = "https://randomuser.me/api/portraits/women/"+randomNum+".jpg"
+    return imgUrl; 
+  }
+} 
