@@ -14,6 +14,7 @@ import { NgbModal, ModalDismissReasons, NgbDateStruct, NgbDate } from '@ng-boots
 })
 
 export class DoctorComponent implements OnInit {
+  time = {hour: 13, minute: 30};
   model: NgbDateStruct | undefined; ;
   closeResult = '';
   doctor: Doctor | undefined;
