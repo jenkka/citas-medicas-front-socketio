@@ -22,6 +22,9 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { MyAppointmentsComponent } from './pages/my-appointments/my-appointments.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -40,14 +43,18 @@ import { MyAppointmentsComponent } from './pages/my-appointments/my-appointments
     SignupComponent,
     ErrorComponent,
     ChatComponent,
-    MyAppointmentsComponent
+    MyAppointmentsComponent 
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IvyCarouselModule,
+    NgbModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

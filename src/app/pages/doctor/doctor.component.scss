@@ -8,11 +8,15 @@ body {
   height: 100%;
   width: 100%;
 }
-
+.modal-header{
+  background-color: $primary;
+}
 .columns {
   margin-top: 0;
 }
-
+.input-group{
+  text-align: left;
+}
 .section {
   background-color: $section;
   min-height: fit-content;

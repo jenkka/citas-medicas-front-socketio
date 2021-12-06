@@ -12,7 +12,7 @@ export class DoctorsComponent implements OnInit {
   doctors: Doctor[] = [];
 
   constructor(private doctorService: DoctorService) { }
-
+ 
   ngOnInit(): void {
     this.doctorService.getDoctors().then(response=> {
       this.doctors = response;

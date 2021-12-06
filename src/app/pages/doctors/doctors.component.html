@@ -1,5 +1,7 @@
+<div class="doctorDiv">
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let doctor of doctors">
     <a routerLink="/doctors/{{doctor.username}}">{{doctor.name}} {{doctor.lastname}} ({{doctor.username}})</a>
   </li>
 </ul>
+</div>

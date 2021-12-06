@@ -61,6 +61,7 @@ export class LoginComponent implements OnInit {
         doc = JSON.parse(doc);
         localStorage.setItem('ma-token', doc.token);
         this.sessionService.setUsername(doc.user);
+        
         this.sessionService.setLoginState(true);
 
         if (doc.doctor) {

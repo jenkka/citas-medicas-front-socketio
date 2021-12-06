@@ -1,5 +1,8 @@
+<div class="clientDiv">
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let client of clients">
     <a routerLink="/clients/{{client.username}}">{{client.name}} {{client.lastname}} ({{client.username}})</a>
   </li>
 </ul>
+<div class="sizebox"></div>
+</div>
