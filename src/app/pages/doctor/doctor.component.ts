@@ -62,7 +62,7 @@ export class DoctorComponent implements OnInit {
   }
 
   create() {
-    this.http.post('ma-back.herokuapp.com/api/appointments/', {
+    this.http.post('https://ma-back.herokuapp.com/api/appointments/', {
       'day': this.model?.day,
       'month': this.model?.month, 'year': this.model?.year, 'start_hour': this.time.hour,
       'start_minute': this.time.minute, 'end_hour': this.time.hour + 2,
