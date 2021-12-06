@@ -42,7 +42,7 @@ export class AppointmentComponent implements OnInit {
     image.append('image', this.selectedFile, this.selectedFile.name);
     // console.log(this.id);
     
-    this.http.post('http://localhost:3001/api/appointments/'+ this.id ,image, { responseType: 'text' }).subscribe(response =>{
+    this.http.post('https://ma-back.herokuapp.com/api/appointments/'+ this.id ,image, { responseType: 'text' }).subscribe(response =>{
       if (response) {
         this.appointmentService.getOneAppointment(this.id).then(response => {
           this.appointment = response;

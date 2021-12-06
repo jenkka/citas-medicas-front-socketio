@@ -13,8 +13,7 @@ import { LoginComponent } from 'src/app/pages/login/login.component';
 })
 export class HeaderComponent implements OnInit {
   constructor(private router: Router, private loginService: LoginService,
-              private logoutService: LogoutService, public sessionService: SessionService,
-              private activatedRoute: ActivatedRoute) { }
+              private logoutService: LogoutService, public sessionService: SessionService) { }
 
   ngOnInit(): void {
     this.loginService.checkToken();
@@ -27,6 +26,7 @@ export class HeaderComponent implements OnInit {
   logout(): void {
     this.logoutService.attemptLogout()
       .then(response => {
+        this.goToPage('home');
         localStorage.removeItem('ma-token');
         this.sessionService.setLoginState(false);
       })

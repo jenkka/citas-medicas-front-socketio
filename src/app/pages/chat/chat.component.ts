@@ -30,7 +30,7 @@ export class ChatComponent implements OnInit {
     this.appointmentsService.getOneAppointment(this.appointmentId)
       .then(results => {
         console.log('length', results)
-        if (results.messages.length > 0) { 
+        if (results.messages) { 
           console.log('doing for each')
           results.messages.forEach((entry: Message) => {
             let msg = `<strong>${entry.user}:</strong> ${entry.content}`;

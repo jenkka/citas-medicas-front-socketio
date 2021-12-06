@@ -64,9 +64,10 @@ export class LoginComponent implements OnInit {
         
         this.sessionService.setLoginState(true);
 
-        if (doc.doctor) {
-          this.sessionService.setDoctorState(true);
-        }
+        console.log('document doctor status:', doc.doctorStatus)
+        this.sessionService.setDoctorState(doc.doctorStatus);
+
+
         console.log('token:', doc.token, ';');
         console.log(this.sessionService.getSessionData())
 

@@ -15,7 +15,7 @@ export class LoginService {
   tryGoogleLogin(): void {
     // const url = environment.apiUrl + "/auth/google";
     // return this.http.get(url, { responseType: 'text' }).toPromise();
-    window.location.href = "//localhost:3001/api/auth/google?signup=false";
+    window.location.href = "//ma-back.herokuapp.com/api/auth/google?signup=false";
   }
 
   attemptLogin(email: string, password: string): Promise<any> {

@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 import { SessionService } from 'src/app/common/services/session.service';
 
 
+
 @Component({
   selector: 'app-doctor',
   templateUrl: './doctor.component.html',
@@ -29,7 +30,9 @@ export class DoctorComponent implements OnInit {
   purpose: string = '';
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, public sessionService: SessionService, private doctorService: DoctorService, private route: ActivatedRoute, private modalService: NgbModal, private calendar: NgbCalendar, private http: HttpClient) {
+  constructor(private fb: FormBuilder, public sessionService: SessionService, private doctorService: DoctorService, 
+              private route: ActivatedRoute, private modalService: NgbModal, private calendar: NgbCalendar, 
+              private http: HttpClient) {
     this.form = this.fb.group({
       'time': [this.time],
       'date': [this.today]
@@ -56,10 +59,9 @@ export class DoctorComponent implements OnInit {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
+
   create() {
-
-
-    this.http.post('http://localhost:3001/api/appointments/', {
+    this.http.post('http://ma-back.herokuapp.com/api/appointments/', {
       'day': this.model?.day,
       'month': this.model?.month, 'year': this.model?.year, 'start_hour': this.time.hour,
       'start_minute': this.time.minute, 'end_hour': this.time.hour + 2,
@@ -68,14 +70,9 @@ export class DoctorComponent implements OnInit {
       'doctor_username': this.username
     }, { responseType: 'text' }).subscribe(response => {
       if (response) {
-
         console.log('appointment', response)
       }
-
     })
-
-
-
   }
 
   private getDismissReason(reason: any): string {

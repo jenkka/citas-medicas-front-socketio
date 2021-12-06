@@ -25,6 +25,6 @@ export class SignupService {
   }
 
   tryGoogleLogin(): void {
-    window.location.href = "//localhost:3001/api/auth/google?signup=true";
+    window.location.href = "//ma-back.herokuapp.com/api/auth/google?signup=true";
   }
 }

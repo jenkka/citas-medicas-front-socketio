@@ -19,8 +19,9 @@
               <p>Email: {{doctor.email}}</p>
             </div>
             <div class="action has-text-centered" *ngIf="!sessionService.isDoctor">
-              <button (click)="open(content)" class="button is-small"><i
-                  class="fas fa-heartbeat"></i>Appointment</button>
+              <button (click)="open(content)" class="button is-small">
+                <i class="fas fa-heartbeat"></i>Appointment
+              </button>
             </div>
           </div>
         </div>
@@ -64,7 +65,7 @@
       </ng-template>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="c('Cancel click')">Cancel</button>
+      <!-- <button type="button" class="btn btn-outline-dark" (click)="c('Cancel click')">Cancel</button> -->
       <button type="button" class="btn btn-outline-dark" type="submit" (click)="create()"><i
         class="fas fa-heartbeat"></i>Submit</button>
     </div>
