@@ -1,7 +1,7 @@
 Se puede encontrar la aplicación en https://mymedicalappointments.herokuapp.com/
 
 En ocasiones hay que recargar la página varias veces hasta que Heroku pueda servirla.
--------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Cómo usar la aplicación:
 - Se puede acceder a la sección de Doctors para que los nuevos usuarios se den una idea de los servicios que se ofrecen.
