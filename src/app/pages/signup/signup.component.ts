@@ -37,7 +37,6 @@ export class SignupComponent implements OnInit {
       email: this.email,
       password: this.password
     }
-    
     this.signupService.attemptSignup(doc)
       .then(response => {
         this.goToPage('login');
