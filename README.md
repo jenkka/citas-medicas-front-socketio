@@ -1,27 +1,28 @@
-# CitasMedicasFront
+Se puede encontrar la aplicación en https://mymedicalappointments.herokuapp.com/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.1.
+En ocasiones hay que recargar la página varias veces hasta que Heroku pueda servirla.
+-------------------------------------------------------------------------------------
 
-## Development server
+Cómo usar la aplicación:
+- Se puede acceder a la sección de Doctors para que los nuevos usuarios se den una idea de los servicios que se ofrecen.
+- Se puede acceder a la sección de Login para iniciar sesión.
+  - Aquí se puede ingresar el email y contraseña de un usuario existente o utilizar Google (hay que recargar la página manualmente, ya que Heroku no redirecciona correctamente).
+  - También se puede dar click en Sign up si el usuario no tiene una cuenta.
+  - En la sección de Sign up se mostrará un formulario que hay que llenar completamente, después se puede dar click en Sign up para crear la cuenta (como paciente).
+  - También se puede crear una cuenta con Google.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Dependiendo de si el usuario es un paciente o un doctor, la experiencia será diferente.
+- Como doctor:
+  - Se puede utilizar la siguiente cuenta como ejemplo: gooddoctor@test.com | doc123
+  - En la sección de Appointments se pueden ver todos las citas que hay registradas.
+  - Al dar click en una cita se mostrarán los detalles de esta, y dentro de aquí también se pueden subir archivos de interés.
+  - Se pueden ver a los doctores registrados en la sección de Doctors. Al dar click en uno se mostrarán los detalles, pero no se puede crear una nueva cita.
+  - Se pueden ver todos los clientes en la sección de Clients, y al dar click en uno se mostrarán sus detalles.
+  - En la sección de Chat se puede dar click en una cita relacionada con el usuario para hablar con el usuario relacionado a esta.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Como usuario:
+  - Se puede utilizar la siguiente cuenta como ejemplo: spider@test.com | spider123
+  - En la sección de Appointments se pueden ver las citas relacionadas con este paciente.
+  - Al dar click en una cita se mostrarán los detalles de esta, y dentro de aquí también se pueden subir archivos de interés.
+  - Se pueden ver a los doctores registrados en la sección de Doctors. Al dar click en uno se mostrarán los detalles y dando click en Appointment se puede crear una nueva cita.
+  - En la sección de Chat se puede dar click en una cita relacionada con el usuario para hablar con el doctor relacionado a esta.
