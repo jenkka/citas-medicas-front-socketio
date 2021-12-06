@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Doctor } from 'src/app/common/datatypes/doctor';
@@ -17,8 +17,7 @@ import { SessionService } from 'src/app/common/services/session.service';
 })
 
 export class DoctorComponent implements OnInit {
-
-
+  @Output() closeModalEvent = new EventEmitter<boolean>();
   model: NgbDateStruct | undefined;
 
   today = this.calendar.getToday();

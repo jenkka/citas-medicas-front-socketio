@@ -28,6 +28,7 @@
       </div>
     </div>
   </div>
+  
   <ng-template #content let-c="close" let-d="dismiss">
     <div class="modal-header">
       <h4 class="modal-title" id="modal-basic-title">Appointment details</h4>
@@ -66,7 +67,7 @@
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-outline-dark" (click)="c('Cancel click')">Cancel</button>
-      <button type="button" class="btn btn-outline-dark" type="submit" (click)="create()" data-dismiss="modal"><i
+      <button type="button" class="btn btn-outline-dark" type="submit" (click)="create();c('Cancel click');"><i
         class="fas fa-heartbeat"></i>Submit</button>
     </div>
   </ng-template>
