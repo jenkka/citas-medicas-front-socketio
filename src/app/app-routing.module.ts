@@ -16,7 +16,7 @@ import { ChatComponent } from './pages/chat/chat.component';
 import { MyAppointmentsComponent } from './pages/my-appointments/my-appointments.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'appointments', component: AppointmentsComponent },
   { path: 'appointments/:id', component: AppointmentComponent },

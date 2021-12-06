@@ -7,10 +7,6 @@ const app = express();
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/citas-medicas-front'));
 
-app.get('/', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/citas-medicas-front/'}),
-);
-
 app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: 'dist/citas-medicas-front/'}),
 );
