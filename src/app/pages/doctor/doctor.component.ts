@@ -44,6 +44,7 @@ export class DoctorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('session state', this.sessionService.isLoggedIn)
     this.doctorService.getOneDoctor(this.username).then(response => {
       this.doctor = response;
       console.log('Doctor', this.doctor)
