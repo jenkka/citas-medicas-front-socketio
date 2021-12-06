@@ -1,7 +1,9 @@
 <div class="appointmentDiv">
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let appointment of appointments">
+    <div *ngIf="sessionService.getUsername() == appointment.client_username || sessionService.isDoctor">
     <a routerLink="/appointments/{{appointment._id}}">[{{appointment.start_date}}] Appointment with {{appointment.client_username}}</a>
+  </div>
   </li>
 </ul>
 </div>

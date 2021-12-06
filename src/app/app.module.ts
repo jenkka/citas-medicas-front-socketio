@@ -43,7 +43,8 @@ import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SignupComponent,
     ErrorComponent,
     ChatComponent,
-    MyAppointmentsComponent
+    MyAppointmentsComponent 
+
 
   ],
   imports: [
@@ -53,7 +54,7 @@ import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     IvyCarouselModule,
-    NgbModule
+    NgbModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

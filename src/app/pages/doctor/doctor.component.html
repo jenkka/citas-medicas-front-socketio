@@ -18,7 +18,7 @@
             <div class="user-bio has-text-centered">
               <p>Email: {{doctor.email}}</p>
             </div>
-            <div class="action has-text-centered">
+            <div class="action has-text-centered" *ngIf="!sessionService.isDoctor">
               <button (click)="open(content)" class="button is-small"><i
                   class="fas fa-heartbeat"></i>Appointment</button>
             </div>
@@ -35,30 +35,38 @@
       </button>
     </div>
     <div class="modal-body">
-      <form>
+      <form [formGroup]="form" (ngSubmit)="create()">
         <div class="form-group">
           <label>Appointment description</label>
           <div class="input-group">
-            <input type="text" style="width: 500px; height: 150px; margin-bottom: 15px;">
+            <input type="text" style="width: 500px; height: 100px; margin-bottom: 15px;" id="purpose"
+              [(ngModel)]="purpose" [ngModelOptions]="{standalone: true}">
           </div>
           <p>Appointment day</p>
           <div class="input-group">
-            <input class="form-control" style="margin-bottom: 15px;" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
-              #d="ngbDatepicker">
+            <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+              [footerTemplate]="footerTemplate" #datePicker="ngbDatepicker" [ngModelOptions]="{standalone: true}">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+              <button class="btn btn-outline-secondary calendar" (click)="datePicker.toggle()" type="button"></button>
             </div>
           </div>
           <label style="margin-bottom: 5px;">Appointment time</label>
-          <div class="input-group">
-            <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
+          <!-- Timepicker -->
+          <div style="margin-left: 155px;">
+            <ngb-timepicker [(ngModel)]="time" formControlName="time"></ngb-timepicker>
           </div>
         </div>
       </form>
+      <ng-template #footerTemplate>
+        <hr class="my-0">
+        <button class="btn btn-primary btn-sm m-2 float-left" (click)="model = today; datePicker.close()">Today</button>
+        <button class="btn btn-secondary btn-sm m-2 float-right" (click)="datePicker.close()">Close</button>
+      </ng-template>
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-outline-dark" (click)="c('Cancel click')">Cancel</button>
-      <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+      <button type="button" class="btn btn-outline-dark" type="submit" (click)="create()"><i
+        class="fas fa-heartbeat"></i>Submit</button>
     </div>
   </ng-template>
 </div>
