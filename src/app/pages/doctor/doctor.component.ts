@@ -23,6 +23,8 @@ export class DoctorComponent implements OnInit {
   today = this.calendar.getToday();
   time = { hour: 13, minute: 30 };
 
+  imgnum = Math.random();
+
   closeResult = '';
   doctor: Doctor | undefined;
   username: string = '';

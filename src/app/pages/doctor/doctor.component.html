@@ -7,22 +7,23 @@
         <div class="card">
           <div class="header">
             <div class="avatar ">
-              <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="">
+              <img src="https://i.pravatar.cc/150?img={{imgnum}}" alt="">
             </div>
           </div>
           <div class="card-body">
             <div class="user-meta has-text-centered">
-              <h3 class="username">{{doctor.name}} {{doctor.lastname}}</h3>
-              <h5 class="Specialty ">{{doctor.specialty}}</h5>
+              <h3 class="card-header">{{doctor.name}} {{doctor.lastname}}</h3>
+              <h5 class="username text-center">Specialty: {{doctor.specialty}}</h5>
             </div>
             <div class="user-bio has-text-centered">
-              <p>Email: {{doctor.email}}</p>
+              <p class="username text-center">Email: {{doctor.email}}</p>
             </div>
-            <div class="action has-text-centered" *ngIf="!sessionService.isDoctor && sessionService.isLoggedIn">
+            <div class="action has-text-centered text-center mb-2" *ngIf="!sessionService.isDoctor && sessionService.isLoggedIn">
               <button (click)="open(content)" class="button is-small">
                 <i class="fas fa-heartbeat"></i>Appointment
               </button>
             </div>
+            <div class="card-footer text-center bg-transparent border-success"><i class="fas fa-heartbeat"></i>Medical Website</div>            
           </div>
         </div>
       </div>

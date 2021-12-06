@@ -1,14 +1,26 @@
 <h1 *ngIf="client == undefined">Client not found</h1>
-<div *ngIf="client != undefined" class="d-flex justify-content-center mt-5 mb-5">
-  <div class="card mb-3 col-6">
-    <div class="card-body">
-      <h5 class="card-header card-title">{{client.name}} {{client.lastname}}</h5>
-      <br>
-      <div class="client-information ml-4">
-        <p class="card-text">Username: {{client.username}}</p>
-        <p class="card-text">Gender: {{client.gender}}</p>
-        <p class="card-text">Age: {{client.age}}</p>
-        <p class="card-text">Email: {{client.email}}</p>        
+<div *ngIf="client != undefined" class="d-flex justify-content-center mt-5 mb-5">  
+  <div class="section">
+    <div class="columns">
+      <div class="column is-4 is-offset-4">
+        <div class="card">
+          <div class="header">
+            <div class="avatar ">
+              <img src="https://i.pravatar.cc/150?img={{imgnum}}" alt="">
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="user-meta has-text-centered">
+              <h3 class="card-header">{{client.name}} {{client.lastname}}</h3>
+              <h3 class="username text-center">Gender: {{client.gender}}</h3>
+              <h3 class="username text-center">Age: {{client.age}}</h3>
+            </div>
+            <div class="user-bio has-text-centered">
+              <p class="text-center">Email: {{client.email}}</p>
+            </div>
+            <div class="card-footer text-center bg-transparent border-success"><i class="fas fa-heartbeat"></i>Medical Website</div>            
+          </div>
+        </div>
       </div>
     </div>
   </div>

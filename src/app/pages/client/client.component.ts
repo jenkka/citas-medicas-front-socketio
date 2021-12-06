@@ -13,7 +13,7 @@ export class ClientComponent implements OnInit {
 
   client: Client | undefined;
   username: string = '';
-
+  imgnum = Math.random();
   constructor(private clientService: ClientService, private route: ActivatedRoute) {
     this.route.params.subscribe((params: any) => {
       this.username = params.username;

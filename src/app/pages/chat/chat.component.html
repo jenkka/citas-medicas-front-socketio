@@ -1,8 +1,10 @@
+<div class="chatDiv">
 <form (submit)="doOnSubmit()">
     <input id="textField" [formControl]="textField" name="message" type="text" [(ngModel)]="msg">
-    <button>Send</button>
+    <button class="button is-small">Send</button>
 </form>
 
 <div>
     <p *ngFor="let message of messages" [innerHTML]="message">{{message}}</p>
+</div>
 </div>

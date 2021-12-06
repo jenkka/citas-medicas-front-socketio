@@ -1,0 +1,25 @@
+$primary: #CEE5D0;
+$secondary: #00D1B2;
+$section: #ededed;
+$muted: #999;
+
+.chatDiv{
+    background-color: #fafafa;
+    margin: 1px;
+    padding: 1rem;
+    border: 2px solid #ccc;
+    /* IMPORTANTE */
+    text-align: center;
+}
+
+.button {
+    padding: 8px 20px 8px 20px;
+    background: $primary;
+    border-color: $primary;
+    color: black;
+    border-radius: 100px;
+    transition: opacity .3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
