@@ -37,12 +37,14 @@ export class AppointmentComponent implements OnInit {
   }  
 
   FileUpload(){
-    //console.log(imageB);
-    const image = new FormData();//
-    image.append('image', this.selectedFile, this.selectedFile.name);
-    // console.log(this.id);
+    // const image = new FormData();//
+    // image.append('image', this.selectedFile, this.selectedFile.name);
+
+    const file = {
+      fileName: this.selectedFile.name
+    }
     
-    this.http.post('https://ma-back.herokuapp.com/api/appointments/'+ this.id ,image, { responseType: 'text' }).subscribe(response =>{
+    this.http.post('https://ma-back.herokuapp.com/api/appointments/'+ this.id ,file, { responseType: 'text' }).subscribe(response =>{
       if (response) {
         this.appointmentService.getOneAppointment(this.id).then(response => {
           this.appointment = response;
